@@ -1,0 +1,92 @@
+2021-02-20 19:09:43,044 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-02-20 19:09:43,062 [INFO ]  Loading model models\20210219-195800.tar.gz...
+2021-02-20 19:09:45,997 [INFO ]  Loading model models\20210219-195800.tar.gz...
+2021-02-20 19:10:02,474 [INFO ]  Rasa server is up and running.
+2021-02-28 13:39:47,977 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-02-28 13:39:47,987 [INFO ]  Loading model models\20210219-195800.tar.gz...
+2021-02-28 13:39:59,245 [INFO ]  Loading model models\20210219-195800.tar.gz...
+2021-02-28 13:40:51,106 [INFO ]  Rasa server is up and running.
+2021-03-21 14:50:51,458 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-03-21 14:50:51,458 [INFO ]  Loading model models\20210219-195800.tar.gz...
+2021-03-21 14:50:54,530 [INFO ]  Loading model models\20210219-195800.tar.gz...
+2021-03-21 14:51:29,113 [INFO ]  Rasa server is up and running.
+2021-03-21 18:45:45,509 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-03-21 18:45:45,524 [INFO ]  Loading model models\20210219-195800.tar.gz...
+2021-03-21 18:45:48,362 [INFO ]  Loading model models\20210219-195800.tar.gz...
+2021-03-21 18:46:07,265 [INFO ]  Rasa server is up and running.
+2021-03-21 18:49:52,131 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-03-21 18:49:52,146 [INFO ]  Loading model models\20210219-195800.tar.gz...
+2021-03-21 18:49:54,994 [INFO ]  Loading model models\20210219-195800.tar.gz...
+2021-03-21 18:50:12,921 [INFO ]  Rasa server is up and running.
+2021-03-21 19:04:08,980 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-03-21 19:04:08,987 [INFO ]  Loading model models\20210219-195800.tar.gz...
+2021-03-21 19:04:11,597 [INFO ]  Loading model models\20210219-195800.tar.gz...
+2021-03-21 19:04:29,319 [INFO ]  Rasa server is up and running.
+2021-03-21 19:11:39,632 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-03-21 19:11:39,637 [INFO ]  Loading model models\20210321-191119.tar.gz...
+2021-03-21 19:11:42,506 [INFO ]  Loading model models\20210321-191119.tar.gz...
+2021-03-21 19:11:56,980 [INFO ]  Rasa server is up and running.
+2021-03-21 19:12:12,081 [ERROR]  Encountered an exception while running action 'action_hello_world'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\processor.py", line 760, in _run_action
+    output_channel, nlg, temporary_tracker, self.domain
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\actions\action.py", line 671, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\utils\endpoints.py", line 151, in request
+    **kwargs,
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\aiohttp\client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\aiohttp\client.py", line 483, in _request
+    timeout=real_timeout
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\aiohttp\connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\aiohttp\connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\aiohttp\connector.py", line 986, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\aiohttp\connector.py", line 936, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)  # type: ignore  # noqa
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\asyncio\base_events.py", line 785, in create_connection
+    yield from self.sock_connect(sock, address)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\asyncio\selector_events.py", line 439, in sock_connect
+    return (yield from fut)
+concurrent.futures._base.CancelledError
+2021-03-21 19:12:12,384 [WARNI]  Received retry #1 request from slack due to http_timeout.
+2021-03-21 19:18:34,427 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-03-21 19:18:34,433 [INFO ]  Loading model models\20210321-191119.tar.gz...
+2021-03-21 19:18:37,015 [INFO ]  Loading model models\20210321-191119.tar.gz...
+2021-03-21 19:18:50,760 [INFO ]  Rasa server is up and running.
+2021-03-21 19:19:13,233 [ERROR]  Encountered an exception while running action 'action_hello_world'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\processor.py", line 760, in _run_action
+    output_channel, nlg, temporary_tracker, self.domain
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\actions\action.py", line 671, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\utils\endpoints.py", line 151, in request
+    **kwargs,
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\aiohttp\client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\aiohttp\client.py", line 483, in _request
+    timeout=real_timeout
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\aiohttp\connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\aiohttp\connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\aiohttp\connector.py", line 986, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\aiohttp\connector.py", line 936, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)  # type: ignore  # noqa
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\asyncio\base_events.py", line 785, in create_connection
+    yield from self.sock_connect(sock, address)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\asyncio\selector_events.py", line 439, in sock_connect
+    return (yield from fut)
+concurrent.futures._base.CancelledError
+2021-03-21 19:19:13,539 [WARNI]  Received retry #1 request from slack due to http_timeout.
+2021-03-21 19:21:45,676 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-03-21 19:21:45,695 [INFO ]  Loading model models\20210321-191119.tar.gz...
+2021-03-21 19:21:48,975 [INFO ]  Loading model models\20210321-191119.tar.gz...
+2021-03-21 19:22:04,973 [INFO ]  Rasa server is up and running.
+2021-04-08 18:33:28,260 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-04-08 18:33:28,307 [INFO ]  Loading model models\20210321-191119.tar.gz...
+2021-04-08 18:33:31,839 [INFO ]  Loading model models\20210321-191119.tar.gz...
+2021-04-08 18:34:15,265 [INFO ]  Rasa server is up and running.
