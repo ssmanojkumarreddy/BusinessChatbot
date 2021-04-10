@@ -90,3 +90,141 @@ concurrent.futures._base.CancelledError
 2021-04-08 18:33:28,307 [INFO ]  Loading model models\20210321-191119.tar.gz...
 2021-04-08 18:33:31,839 [INFO ]  Loading model models\20210321-191119.tar.gz...
 2021-04-08 18:34:15,265 [INFO ]  Rasa server is up and running.
+2021-04-09 13:05:57,858 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-04-09 13:05:57,878 [INFO ]  Loading model models\20210321-191119.tar.gz...
+2021-04-09 13:06:01,901 [INFO ]  Loading model models\20210321-191119.tar.gz...
+2021-04-09 13:06:35,793 [INFO ]  Rasa server is up and running.
+2021-04-09 13:10:06,917 [ERROR]  Encountered an exception while running action 'action_hello_world'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\processor.py", line 760, in _run_action
+    output_channel, nlg, temporary_tracker, self.domain
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\actions\action.py", line 671, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\utils\endpoints.py", line 151, in request
+    **kwargs,
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\aiohttp\client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\aiohttp\client.py", line 504, in _request
+    await resp.start(conn)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\aiohttp\client_reqrep.py", line 847, in start
+    message, payload = await self._protocol.read()  # type: ignore  # noqa
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\aiohttp\streams.py", line 591, in read
+    await self._waiter
+concurrent.futures._base.CancelledError
+2021-04-09 13:10:07,221 [WARNI]  Received retry #1 request from slack due to http_timeout.
+2021-04-09 13:11:27,196 [ERROR]  Exception when trying to handle message.
+2021-04-09 13:11:27,210 [ERROR]  
+Traceback (most recent call last):
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\channels\slack.py", line 378, in process_message
+    await on_new_message(user_msg)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\channels\channel.py", line 85, in handler
+    await app.agent.handle_message(*args, **kwargs)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\agent.py", line 528, in handle_message
+    return await processor.handle_message(message)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\processor.py", line 100, in handle_message
+    await self._predict_and_execute_next_action(message.output_channel, tracker)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\processor.py", line 647, in _predict_and_execute_next_action
+    action, tracker, output_channel, self.nlg, prediction
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\processor.py", line 785, in _run_action
+    await self.execute_side_effects(events, tracker, output_channel)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\processor.py", line 686, in execute_side_effects
+    await self._send_bot_messages(events, tracker, output_channel)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\processor.py", line 702, in _send_bot_messages
+    await output_channel.send_response(tracker.sender_id, e.message())
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\channels\channel.py", line 186, in send_response
+    await self.send_text_message(recipient_id, message.pop("text"), **message)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\channels\slack.py", line 62, in send_text_message
+    channel=recipient, as_user=True, text=message_part, type="mrkdwn"
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\channels\slack.py", line 54, in _post_message
+    await self.client.chat_postMessage(channel=channel, **kwargs)
+concurrent.futures._base.CancelledError
+2021-04-09 13:11:27,654 [WARNI]  Received retry #1 request from slack due to http_timeout.
+2021-04-09 13:14:39,662 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-04-09 13:14:39,669 [INFO ]  Loading model models\20210321-191119.tar.gz...
+2021-04-09 13:14:43,355 [INFO ]  Loading model models\20210321-191119.tar.gz...
+2021-04-09 13:15:03,834 [INFO ]  Rasa server is up and running.
+2021-04-09 13:15:49,400 [ERROR]  Exception when trying to handle message.
+2021-04-09 13:15:49,405 [ERROR]  
+Traceback (most recent call last):
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\channels\slack.py", line 378, in process_message
+    await on_new_message(user_msg)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\channels\channel.py", line 85, in handler
+    await app.agent.handle_message(*args, **kwargs)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\agent.py", line 528, in handle_message
+    return await processor.handle_message(message)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\processor.py", line 100, in handle_message
+    await self._predict_and_execute_next_action(message.output_channel, tracker)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\processor.py", line 647, in _predict_and_execute_next_action
+    action, tracker, output_channel, self.nlg, prediction
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\processor.py", line 785, in _run_action
+    await self.execute_side_effects(events, tracker, output_channel)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\processor.py", line 686, in execute_side_effects
+    await self._send_bot_messages(events, tracker, output_channel)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\processor.py", line 702, in _send_bot_messages
+    await output_channel.send_response(tracker.sender_id, e.message())
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\channels\channel.py", line 186, in send_response
+    await self.send_text_message(recipient_id, message.pop("text"), **message)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\channels\slack.py", line 62, in send_text_message
+    channel=recipient, as_user=True, text=message_part, type="mrkdwn"
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\channels\slack.py", line 54, in _post_message
+    await self.client.chat_postMessage(channel=channel, **kwargs)
+concurrent.futures._base.CancelledError
+2021-04-09 13:15:49,854 [WARNI]  Received retry #1 request from slack due to http_timeout.
+2021-04-09 13:17:19,085 [ERROR]  Exception when trying to handle message.
+2021-04-09 13:17:19,090 [ERROR]  
+Traceback (most recent call last):
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\channels\slack.py", line 378, in process_message
+    await on_new_message(user_msg)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\channels\channel.py", line 85, in handler
+    await app.agent.handle_message(*args, **kwargs)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\agent.py", line 528, in handle_message
+    return await processor.handle_message(message)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\processor.py", line 100, in handle_message
+    await self._predict_and_execute_next_action(message.output_channel, tracker)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\processor.py", line 647, in _predict_and_execute_next_action
+    action, tracker, output_channel, self.nlg, prediction
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\processor.py", line 785, in _run_action
+    await self.execute_side_effects(events, tracker, output_channel)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\processor.py", line 686, in execute_side_effects
+    await self._send_bot_messages(events, tracker, output_channel)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\processor.py", line 702, in _send_bot_messages
+    await output_channel.send_response(tracker.sender_id, e.message())
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\channels\channel.py", line 186, in send_response
+    await self.send_text_message(recipient_id, message.pop("text"), **message)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\channels\slack.py", line 62, in send_text_message
+    channel=recipient, as_user=True, text=message_part, type="mrkdwn"
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\channels\slack.py", line 54, in _post_message
+    await self.client.chat_postMessage(channel=channel, **kwargs)
+concurrent.futures._base.CancelledError
+2021-04-09 13:17:19,557 [WARNI]  Received retry #1 request from slack due to http_timeout.
+2021-04-09 13:20:05,410 [ERROR]  Exception when trying to handle message.
+2021-04-09 13:20:05,415 [ERROR]  
+Traceback (most recent call last):
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\channels\slack.py", line 378, in process_message
+    await on_new_message(user_msg)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\channels\channel.py", line 85, in handler
+    await app.agent.handle_message(*args, **kwargs)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\agent.py", line 528, in handle_message
+    return await processor.handle_message(message)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\processor.py", line 100, in handle_message
+    await self._predict_and_execute_next_action(message.output_channel, tracker)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\processor.py", line 647, in _predict_and_execute_next_action
+    action, tracker, output_channel, self.nlg, prediction
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\processor.py", line 785, in _run_action
+    await self.execute_side_effects(events, tracker, output_channel)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\processor.py", line 686, in execute_side_effects
+    await self._send_bot_messages(events, tracker, output_channel)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\processor.py", line 702, in _send_bot_messages
+    await output_channel.send_response(tracker.sender_id, e.message())
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\channels\channel.py", line 186, in send_response
+    await self.send_text_message(recipient_id, message.pop("text"), **message)
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\channels\slack.py", line 62, in send_text_message
+    channel=recipient, as_user=True, text=message_part, type="mrkdwn"
+  File "c:\users\manoj reddy\anaconda3\envs\chatbot_env\lib\site-packages\rasa\core\channels\slack.py", line 54, in _post_message
+    await self.client.chat_postMessage(channel=channel, **kwargs)
+concurrent.futures._base.CancelledError
+2021-04-09 13:20:05,877 [WARNI]  Received retry #1 request from slack due to http_timeout.
+2021-04-10 15:13:07,729 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-04-10 15:13:07,744 [INFO ]  Loading model models\20210321-191119.tar.gz...
+2021-04-10 15:13:11,729 [INFO ]  Loading model models\20210321-191119.tar.gz...
+2021-04-10 15:13:46,286 [INFO ]  Rasa server is up and running.

@@ -33,3 +33,12 @@ stories:
   steps:
   - intent: hello_world
   - action: action_hello_world 
+  
+- story: getResturants
+  steps:
+  - intent: find_Resturants
+    entities:
+    - source: "hyderabad"
+    - destination: "mumbai"
+  - action: action_get_resturants 
+

@@ -54,5 +54,40 @@ class ActionHelloWorld(Action):
 
         return []
 
+class ActiongetResturants(Action):
+
+    def name(self) -> Text:
+        return "action_get_resturants"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        #connection = create_connection("localhost", "root", "", "bits")
+        intent=tracker.latest_message['intent'].get('name')
+        source=""
+        destination=""
+        for e in tracker.latest_message["entities"] :
+            if e["entity"]== "source" :
+                source= e['value']
+            if e["entity"]== "destination" :
+                destination= e['value']
+        print(source+ " " +destination + "for" + intent)
+        connection = mysql.connector.connect(
+				host="localhost",
+				user="root",
+				passwd="",
+				database="bits"
+			)
+        cursor = connection.cursor()
+        try:
+            cursor.execute("SELECT * FROM resturant r WHERE r.city =%s" , (source,))
+            name = cursor.fetchall()
+            print("exceuted successfully")
+            msg = 'Hello {}!'.format(name)
+            dispatcher.utter_message(msg)
+        except Error as e:
+            print(f"The error '{e}' occurred")
+
+        return []
 
 

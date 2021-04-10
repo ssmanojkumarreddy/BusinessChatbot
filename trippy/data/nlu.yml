@@ -90,7 +90,15 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
 - intent: hello_world
   examples: |
     - helloworld
     - hello world
+
+- intent: find_Resturants
+  examples: |  
+    - find resturants in [hyderabad](source) and [mumbai](destination)
+    - get resturants in [hyderabad](source) and [mumbai](destination)
+    
+ 
